@@ -1,14 +1,25 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
   "name": "FirstFifty",
   "description": "FirstFifty connects makers of experimental apps with their first believers through numbered seats, devlogs, and an optional token launch on Monad.",
-  "colors": {
-    "primary": "#d4a024",
-    "light": "#f8c93e",
-    "dark": "#846424"
+  "theme": "willow",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://firstfifty.xyz"
   },
-  "favicon": "https://media.brand.dev/d27e25b2-92dc-4381-9eff-0c680d28faa5.svg",
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#b8861a",
+    "light": "#d4a024",
+    "dark": "#a07314"
+  },
+  "background": {
+    "color": {
+      "light": "#fafaf7",
+      "dark": "#0f0f0f"
+    }
+  },
   "appearance": {
     "default": "dark"
   },
@@ -24,10 +35,41 @@
       {
         "tab": "Documentation",
         "groups": [
-          { "group": "Get Started", "pages": ["introduction", "how-it-works", "create-account"] },
-          { "group": "For Makers", "pages": ["makers/overview", "makers/app-page", "makers/devlog", "makers/tiers-and-perks", "makers/token-launch"] },
-          { "group": "For Early Adopters", "pages": ["adopters/overview", "adopters/tiers", "adopters/contribution-points", "adopters/leaderboards"] },
-          { "group": "Platform", "pages": ["platform/discover", "platform/community-features", "platform/faq"] }
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "how-it-works",
+              "create-account"
+            ]
+          },
+          {
+            "group": "For Makers",
+            "pages": [
+              "makers/overview",
+              "makers/app-page",
+              "makers/devlog",
+              "makers/tiers-and-perks",
+              "makers/token-launch"
+            ]
+          },
+          {
+            "group": "For Early Adopters",
+            "pages": [
+              "adopters/overview",
+              "adopters/tiers",
+              "adopters/contribution-points",
+              "adopters/leaderboards"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/discover",
+              "platform/community-features",
+              "platform/faq"
+            ]
+          }
         ]
       }
     ]
@@ -36,8 +78,5 @@
     "socials": {
       "website": "https://firstfifty.xyz"
     }
-  },
-  "styling": {
-    "latex": false
   }
 }

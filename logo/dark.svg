@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 128" width="500" height="128">
+  <g transform="scale(0.125)">
   <rect width="1024" height="1024" rx="200" fill="#FFC838"/>
   <g transform="translate(152 262)">
     <rect width="720" height="500" rx="52" fill="#111111"/>
@@ -14,4 +15,6 @@
       <path d="M-7 -18 L5 -28 V28" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
+</g>
+  <text x="152" y="90" font-family="'Cabinet Grotesk','Helvetica Neue',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2.2" fill="#ffffff">First<tspan fill="#d4a024">Fifty</tspan></text>
 </svg>
