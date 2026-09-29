@@ -1,0 +1,74 @@
+{
+  "projectType": "saas",
+  "projectName": "FirstFifty",
+  "projectDescription": "FirstFifty is a launch platform for indie makers that connects them with early adopters through tiered community access, devlogs, and an optional token launch on Monad with anti-rug mechanics built in.",
+  "theme": "willow",
+  "primaryColor": "#d4a024",
+  "lightColor": "#f8c93e",
+  "darkColor": "#846424",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "how-it-works",
+              "create-account"
+            ]
+          },
+          {
+            "group": "For Makers",
+            "pages": [
+              "makers/overview",
+              "makers/app-page",
+              "makers/devlog",
+              "makers/tiers-and-perks",
+              "makers/token-launch"
+            ]
+          },
+          {
+            "group": "For Early Adopters",
+            "pages": [
+              "adopters/overview",
+              "adopters/tiers",
+              "adopters/contribution-points",
+              "adopters/leaderboards"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/discover",
+              "platform/community-features",
+              "platform/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Founding 50 & Early 500 tiered access slots per app",
+    "Built-in devlog with per-tier visibility controls",
+    "Contribution Points (CP) system for early adopters",
+    "Open bonding curve token launch on Monad (optional)",
+    "Founder allocation vesting with contract-enforced anti-rug",
+    "Liquidity locked at graduation — enforced, not promised",
+    "Retroactive token allocation for early backers",
+    "Member polls and co-edited roadmap",
+    "App discovery feed with category filters",
+    "Leaderboards: Most Backers, Top Believers, Trending, Closest to Graduation"
+  ],
+  "publicApiSurface": [
+    "GET /discover — browse live app listings",
+    "GET /leaderboards?board=most_backers|top_believers|trending|closest_to_graduation",
+    "POST /signup — create account (email/password or Google OAuth)",
+    "POST /login — authenticate user",
+    "POST /forgot-password — request password reset link",
+    "POST /dashboard/apps/new — create a new app listing (authenticated)",
+    "Launchpad mint config: chain, mechanic, founder_allocation, founder_vesting, liquidity_lock_at_graduation, no_token_option"
+  ]
+}

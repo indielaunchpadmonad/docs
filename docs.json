@@ -1,0 +1,68 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "FirstFifty",
+  "theme": "willow",
+  "favicon": "https://media.brand.dev/d27e25b2-92dc-4381-9eff-0c680d28faa5.svg",
+  "colors": {
+    "primary": "#d4a024",
+    "light": "#f8c93e",
+    "dark": "#846424"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "how-it-works",
+              "create-account"
+            ]
+          },
+          {
+            "group": "For Makers",
+            "pages": [
+              "makers/overview",
+              "makers/app-page",
+              "makers/devlog",
+              "makers/tiers-and-perks",
+              "makers/token-launch"
+            ]
+          },
+          {
+            "group": "For Early Adopters",
+            "pages": [
+              "adopters/overview",
+              "adopters/tiers",
+              "adopters/contribution-points",
+              "adopters/leaderboards"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/discover",
+              "platform/community-features",
+              "platform/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Launch Your App",
+      "href": "https://firstfifty.xyz/dashboard/apps/new"
+    }
+  },
+  "footer": {
+    "socials": {}
+  }
+}

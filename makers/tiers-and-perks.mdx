@@ -1,0 +1,70 @@
+---
+title: "Founding 50 and Early 500: Tiers and Perks for Every App"
+sidebarTitle: "Tiers & Perks"
+description: "Every FirstFifty app includes Founding 50 and Early 500 tier slots. Configure perks, see what backers receive, and learn how scarcity drives engagement."
+---
+
+Every app on FirstFifty automatically comes with three tiers: Founding 50, Early 500, and Public. You don't set up the tier structure — it's built into the platform. What you configure is the perks attached to each tier: what Founding 50 members get that Early 500 members don't, and what both get that public visitors don't. The scarcity is the mechanic. Fifty Founding 50 slots, five hundred Early 500 slots, globally, ever. Once they're claimed, they're gone.
+
+## The three tiers
+
+<CardGroup cols={3}>
+  <Card title="Founding 50" icon="trophy" href="/adopters/tiers">
+    **50 slots per app — permanent.**
+
+    - Mono-typed slot number displayed on their profile
+    - Monthly founder office hours (direct access to you)
+    - Roadmap vote on all open decisions
+    - Founding 50–only devlog visibility
+    - Retroactive allocation: `tier × CP × time held` (largest slice)
+    - On-chain slot receipt proving they were among the first 50
+  </Card>
+  <Card title="Early 500" icon="medal" href="/adopters/tiers">
+    **500 slots per app — permanent.**
+
+    - Public badge showing their slot number
+    - Early access to new features (one week ahead of public)
+    - Roadmap vote on all open decisions
+    - Members-only devlog visibility
+    - Retroactive allocation: `tier × CP × time held` (smaller slice than Founding 50)
+    - On-chain slot receipt proving they were in the first 500
+  </Card>
+  <Card title="Public" icon="globe" href="/adopters/tiers">
+    **Unlimited — no slot required.**
+
+    - Access to your public devlog entries and milestone updates
+    - Participation in public polls
+    - Ability to buy your token if you've launched one
+    - No slot receipt, no retroactive allocation, no tier-gated access
+  </Card>
+</CardGroup>
+
+## Slot receipts
+
+When someone claims a Founding 50 or Early 500 slot on your app, they receive a permanent on-chain receipt tied to their slot number. The receipt is timestamped at claim time and cannot be transferred or duplicated. Slot `#3` will always be slot `#3` — it's a verifiable record that this person was among the first to back your app.
+
+This matters for two reasons. First, it makes early support legible: a Founding 50 badge isn't a follower count or a like — it's a provable claim with a number attached. Second, it creates a social incentive to claim early: lower slot numbers carry more status, and the retroactive allocation formula rewards time held, so getting in at slot `#3` versus slot `#47` has a compounding effect.
+
+## Contribution Points (CP)
+
+Contribution Points accumulate when backers interact with your app: reacting to devlog entries, voting on polls, completing milestone interactions, and participating in roadmap votes. CP is tracked per backer, per app. It reflects how engaged someone is with your build over time — not just that they claimed a slot, but that they kept showing up.
+
+CP compounds into leaderboard rank and into the retroactive allocation formula. For detailed mechanics on how CP is earned and tracked, see the [Contribution Points guide](/adopters/contribution-points).
+
+## Retroactive allocation formula
+
+If your app launches a token and reaches graduation, backers with tier slots become eligible for a retroactive allocation. The formula is:
+
+```
+retroactive allocation = tier weight × CP × time held
+```
+
+- **Tier weight** — Founding 50 carries a higher multiplier than Early 500. Public backers are not eligible.
+- **CP** — total Contribution Points earned on your app. More engagement means a larger slice.
+- **Time held** — how long the backer has held their slot. Claiming early and staying engaged maximizes the return.
+
+The formula rewards the backers who were most invested — both financially (via tier) and behaviorally (via CP and time). It aligns your community's incentives with your app's long-term success.
+
+<Note>
+  You don't need a token to use tiers. Community-only mode is fully supported — Founding 50 and Early 500 tiers, devlog visibility controls, polls, milestones, and Contribution Points all work without any token attached to your app. Retroactive allocation simply doesn't apply if there's no token to graduate.
+</Note>
