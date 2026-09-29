@@ -1,77 +1,74 @@
 ---
-title: "FirstFifty FAQ: Answers for Makers and Early Adopters"
+title: "FAQ"
 sidebarTitle: "FAQ"
-description: "Common questions answered for both indie makers and early adopters — covering tiers, tokens, retroactive allocation, Contribution Points, and more."
+description: "Answers for makers and early adopters on apps, seats, tokens, Contribution Points, and wallets."
 ---
 
-Whether you're a maker figuring out whether to attach a token to your launch or an early adopter trying to understand how retroactive allocation works, the answers below cover the questions that come up most. If something isn't here, the relevant deep-dive pages are linked throughout.
+## The basics
 
-## For Makers
+<AccordionGroup>
+  <Accordion title="What is an app on FirstFifty?">
+    An app is a product a maker is building: a tool, game, service, or experiment. On FirstFifty each one gets a page with its story, roadmap, devlog, community, and numbered seats. An app can be a rough concept or a shipped product, and it can stay community-only or also launch a token.
+  </Accordion>
 
-<Accordion title="Do I need to launch a token?">
-  No. Community-only mode is a fully supported, first-class path on FirstFifty. All tiers (Founding 50 and Early 500), the devlog, member polls, milestones, and the co-edited roadmap work exactly the same whether or not you attach a token. The token mechanic is opt-in — you add it when and if it makes sense for your project, not because the platform requires it.
-</Accordion>
+  <Accordion title="What is a seat?">
+    A numbered, permanent claim on having been early to one app. Founding has 50 seats, Early has 500, and Public is unlimited. See [Seats & Tiers](/adopters/tiers).
+  </Accordion>
 
-<Accordion title="How do I get listed on the discover feed?">
-  FirstFifty onboards makers by hand. There's no self-serve "publish and go live" button — every app on the discover feed has been reviewed. To get in line, start a draft at [firstfifty.xyz/dashboard/apps/new](https://firstfifty.xyz/dashboard/apps/new) and the team will reach out as spots open. Having a polished draft ready (story, tiers, at least one milestone) speeds up the process considerably.
-</Accordion>
+  <Accordion title="Do I need a crypto wallet?">
+    Not to join, claim a Public seat, vote, react, or earn CP. A Monad wallet is needed for token buys, for qualifying buys that claim a capped seat on token apps, and for minting the soulbound backer proof.
+  </Accordion>
+</AccordionGroup>
 
-<Accordion title="What is the founder allocation cap?">
-  You can set your founder allocation anywhere from 0% to 20% of the token supply — the choice is yours. Whatever percentage you choose vests on a cliff and schedule that you configure before launch. The vesting clock starts at graduation (when the bonding curve fills), not at launch. Critically, the contract enforces this: once you go live, you cannot change your allocation percentage, cliff, or vest schedule. This is what makes the anti-rug guarantee credible to your backers.
-</Accordion>
+## For makers
 
-<Accordion title="What happens at graduation?">
-  Graduation is the moment the bonding curve fills. Four things happen simultaneously, all contract-enforced:
+<AccordionGroup>
+  <Accordion title="Do I have to launch a token?">
+    No. Community-only is a first-class path. Seats, devlogs, polls, milestones, and the forum work the same with or without a token.
+  </Accordion>
 
-  1. **Liquidity locks** — the funds raised on the bonding curve are locked in the contract permanently.
-  2. **Your vesting clock starts** — your founder allocation begins unlocking according to the cliff and schedule you set at launch.
-  3. **Token holders auto-sync into tier feeds** — anyone who holds the token is automatically recognized in your community tier structure.
-  4. **Retroactive allocations become claimable** — Founding 50 and Early 500 backers who earned Contribution Points can claim their retroactive slice.
+  <Accordion title="How do I get listed?">
+    Every app is reviewed by hand before it appears in Discover. Create a draft from your dashboard at [firstfifty.xyz/dashboard/apps/new](https://firstfifty.xyz/dashboard/apps/new); a complete draft with a story, tiers, and a milestone moves fastest.
+  </Accordion>
 
-  For a full breakdown of the token mechanics, see the [Token Launch guide](/makers/token-launch).
-</Accordion>
+  <Accordion title="How much can I allocate to myself?">
+    You choose a founder allocation between 0% and 20% of supply. It vests in a contract on a cliff and schedule you set before launch, and cannot be changed once live. See [Token Launch](/makers/token-launch).
+  </Accordion>
 
-<Accordion title="Can I change my tier perks after launch?">
-  Some things can be updated; others are locked. **You can update** operational perks like office hours cadence, roadmap vote format, and devlog post cadence. **You cannot change** slot numbers (the 50 and 500 caps are fixed), retroactive allocation parameters, or any contract-level settings after the launch goes live. Plan your tier structure carefully before publishing — the scarcity and the allocation formula are part of what makes a Founding 50 slot credible to backers.
-</Accordion>
+  <Accordion title="What happens at graduation?">
+    When the curve fills, liquidity locks, your vesting clock starts, and token holders sync into your tier feeds. All of it is enforced by the contract.
+  </Accordion>
 
-## For Early Adopters
+  <Accordion title="Can I change things after launch?">
+    Operational perks such as office hours or devlog cadence can be updated. Seat caps and contract-level settings cannot.
+  </Accordion>
+</AccordionGroup>
 
-<Accordion title="How do I claim a Founding 50 slot?">
-  Browse the discover feed at [firstfifty.xyz/discover](https://firstfifty.xyz/discover), find a project you believe in, and open its app page. On the app page, check the tier section to confirm Founding 50 slots are still available, then hit the claim button. Your slot number is assigned immediately — it's permanent, appears on your profile, and is recorded on the app's member list. Slots are first-come, first-served, so earlier claims get lower (more coveted) slot numbers.
-</Accordion>
+## For early adopters
 
-<Accordion title="What is retroactive allocation?">
-  Retroactive allocation is how your early backer status becomes a financial claim if the app you backed launches a token and graduates. No purchase is required to earn it — you accumulate eligibility just by being an early member and staying engaged.
+<AccordionGroup>
+  <Accordion title="How do I get a Founding seat?">
+    Open an app, check the tier card, and make a single qualifying buy at or above the Founding threshold, or be granted a seat by the maker. Split buys do not add up. If Founding is full, you roll down to the next tier with room.
+  </Accordion>
 
-  The formula is: **tier × CP × time held**
+  <Accordion title="What do I earn for being early?">
+    A permanent seat number, Contribution Points, a place on the leaderboards, and an optional soulbound backer proof minted to your wallet. See [Contribution Points](/adopters/contribution-points).
+  </Accordion>
 
-  - **Tier** — Founding 50 carries a higher multiplier than Early 500.
-  - **CP** — Contribution Points you've earned through reactions, votes, and milestone interactions.
-  - **Time held** — how long you've held your slot before graduation.
+  <Accordion title="If I sell my tokens, do I lose my seat?">
+    No. A seat records that you were early. It is not a balance.
+  </Accordion>
 
-  When the bonding curve graduates, your retroactive slice becomes claimable. For more detail, see the [Contribution Points guide](/adopters/contribution-points).
-</Accordion>
+  <Accordion title="When do leaderboard scores appear?">
+    Most Backers is live immediately. Top Believers fills once the first launch graduates and counts earlier activity. See [Leaderboards](/adopters/leaderboards).
+  </Accordion>
 
-<Accordion title="When do leaderboard scores appear?">
-  Leaderboard scores appear once the first launch graduates. The scoring formula incorporates early buys and held seats on graduated tokens alongside Contribution Points, so the boards can't be fully populated until at least one app has crossed the graduation threshold. Until then, the boards fill progressively as people claim slots on live apps — you can watch the ranks form in real time. See the [Leaderboards page](/adopters/leaderboards) for a breakdown of all four boards.
-</Accordion>
-
-<Accordion title="Do I need a crypto wallet to use FirstFifty?">
-  No. You don't need a wallet to create an account, claim a tier slot, vote in polls, comment on devlog entries, or earn Contribution Points. All community features work with just a FirstFifty account. A Monad-compatible wallet is only required if you want to buy tokens when an app launches its bonding curve — that's the one action that touches the chain directly.
-</Accordion>
-
-<Accordion title="What is the difference between Founding 50 and Early 500?">
-  Both tiers give you a permanent slot number, early access, and a share of retroactive allocation — but Founding 50 is the top tier, with sharper scarcity and higher rewards.
-
-  | | Founding 50 | Early 500 |
-  |---|---|---|
-  | Slots per app | 50 | 500 |
-  | Slot number | Mono-typed, on your profile and the app | Public badge with slot number |
-  | Founder access | Monthly office hours with the founder | — |
-  | Roadmap vote | ✓ | ✓ |
-  | Early access | — | One week ahead of public |
-  | Retroactive allocation | Highest multiplier | Smaller slice |
-
-  If a Founding 50 slot is available for an app you believe in, claim it early — once all 50 are gone, the only option is Early 500 or the public tier.
-</Accordion>
+  <Accordion title="What is the difference between Founding and Early?">
+    |  | Founding | Early |
+    | --- | --- | --- |
+    | Seats per app | 50 | 500 |
+    | Content | Founding, Members, and Public | Members and Public |
+    | CP per action | Highest | Strong |
+    | Buy threshold | Higher | Lower |
+  </Accordion>
+</AccordionGroup>

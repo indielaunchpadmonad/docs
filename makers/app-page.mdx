@@ -1,55 +1,58 @@
 ---
-title: "How to Publish Your App Page on FirstFifty in 30 Minutes"
+title: "Your App Page"
 sidebarTitle: "App Page"
-description: "Build a polished app page with story, tiers, milestones, and a devlog — everything your Founding 50 community needs in one place."
+description: "Build the public home of your experimental app: story, links, tiers, milestones, and the share card it unfurls with - live in about 30 minutes."
 ---
 
-Your app page is the public face of your launch on FirstFifty. It's where early adopters decide whether to claim a Founding 50 slot, follow your devlog, and vote on your roadmap. A strong app page communicates who the app is for, why you're building it, and what backers get for being early. You can go from blank canvas to published page in under 30 minutes — FirstFifty's dashboard guides you through every section.
+The app page is where a stranger becomes a believer. It should answer three questions in ten seconds: _what is this_, _can I try it_, and _how early am I_.
 
-## Setting up your app page
+## Creating the page
 
 <Steps>
-  <Step title="Sign in and open the app editor">
-    Go to [firstfifty.xyz/dashboard/apps/new](https://firstfifty.xyz/dashboard/apps/new) and sign in with your account. The editor opens directly to your new app draft. Nothing is public until you explicitly publish.
+  <Step title="Details">
+    Name, a 140-character one-liner, category, and stage. Be honest about stage - a concept labelled as launched costs you trust with exactly the people you want.
   </Step>
-  <Step title="Write your hero and story">
-    Your hero is the first thing an early adopter sees: a short headline and a one-sentence description of what your app does. Below it, your story gives context — who you're building for, what problem you're solving, and why you're the person building it. Write for a reader who has never heard of you. Be specific about the use case; vague copy loses the people who would have been your best backers.
+  <Step title="Links">
+    Website first - **it becomes the "Try it" button at the top of your page**, so point it at whatever a visitor should open: your site, a download, a demo. Then X and GitHub, plus anything else (Farcaster, a Substack).
   </Step>
-  <Step title="Configure your tiers">
-    Set the perks for your Founding 50 (50 slots) and Early 500 (500 slots) tiers. For each tier, decide what access members get — early devlog visibility, office hours, roadmap votes, or any custom perk you want to offer. Scarcity is the mechanic: Founding 50 slots are limited to 50 per app, globally, ever. Make it clear in your tier copy why claiming one early matters.
+  <Step title="Story">
+    Markdown, up to 5,000 characters. What you're building, why, and what the first fifty get for showing up early. The founder-vesting card on token apps sets the tone worth copying: plain sentences about real mechanics.
   </Step>
-  <Step title="Add milestones">
-    Milestones are public build checkpoints that let your community track your progress without you having to narrate every commit. Add the major phases of your build: beta, first paying user, public launch, v2. Milestones give your backers a shared map of where you're headed — and completing them earns your community Contribution Points.
+  <Step title="Logo and banner">
+    Square logo, wide banner. They carry your page and your generated share card.
   </Step>
-  <Step title="Publish your draft">
-    When your page is ready, submit it for review. FirstFifty onboards makers by hand, so the team will review your draft and coordinate the go-live with you. You'll be reachable through the dashboard — expect a response quickly.
+  <Step title="Token - or not">
+    Choose community-only or token mode. Token mode adds the [launch flow](/makers/token-launch); you can start community-only and it is a deliberate, supported choice.
+  </Step>
+  <Step title="Publish">
+    Publishing opens your three tiers automatically and lists you in Discover. Your slug is permanent from this moment - the URL people share never breaks.
   </Step>
 </Steps>
 
-## What your app page includes
+## What the live page contains
 
-Every published app page on FirstFifty comes with the following sections out of the box:
+<AccordionGroup>
+  <Accordion title="Overview tab" icon="house">
+    Story, milestones, latest devlog, the tier card with live seats-left counts, polls, and the community forum preview.
+  </Accordion>
 
-- **Hero and story** — your app's headline, one-line description, and founder narrative
-- **Tier slots with perks** — Founding 50 (50 slots) and Early 500 (500 slots), each configured with the perks you define
-- **Milestone tracker** — a public progress board showing your build checkpoints and completion status
-- **Devlog feed** — a chronological stream of your updates, with per-tier visibility controls per entry
-- **Member polls** — embed polls directly in devlog entries or as standalone prompts for your community
-- **Token configuration** (optional) — if you choose to launch a token, the mint config is displayed on your app page with full transparency
+  <Accordion title="Token & chart tab (token apps)" icon="chart-line">
+    Live chart, trade panel (curve before graduation, the Uniswap pool after - trading never leaves your page), holders, token facts, and the founder vesting card.
+  </Accordion>
 
-## Categories
+  <Accordion title="Forum tab" icon="comments">
+    Threads and replies from your members. Pin what matters.
+  </Accordion>
 
-When you publish your app page, you assign it a category. The category determines how your app surfaces in FirstFifty's discovery feed and which early adopters find it. The available categories are:
+  <Accordion title="Backers page" icon="users">
+    Every seat holder with their tier and number, ranked by Contribution Points earned on your app.
+  </Accordion>
+</AccordionGroup>
 
-- **AI** — AI-native tools, assistants, and infrastructure
-- **Productivity** — task management, focus tools, personal systems
-- **Finance** — budgeting, investing, payments, financial tracking
-- **Developer Tools** — CLIs, editors, APIs, developer workflow
-- **Media** — content creation, publishing, podcasting, video
-- **Games** — indie games, game tools, interactive experiences
-- **Web3** — onchain apps, wallets, DeFi, NFT tools
-- **Other** — anything that doesn't fit cleanly above
+## Sharing
 
-<Note>
-  Your app page is a permanent artifact. Every devlog entry gets an evergreen URL and a mono-typed timestamp — nothing disappears or gets buried in an algorithmic feed. Backers can always find the full history of your build.
-</Note>
+Every page ships with **Copy link**, **Share on X**, and **Warpcast** buttons, and the link unfurls with your generated card. Backers get their own share moments too - claiming a seat is designed to be posted.
+
+<Tip>
+  The single highest-leverage field is the website link. A page with a working "Try it" button converts curious visitors into seat holders; a page without one asks them to believe on faith.
+</Tip>

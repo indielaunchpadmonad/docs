@@ -1,64 +1,56 @@
 ---
-title: "How to Launch a Token on Monad with Anti-Rug Mechanics"
+title: "Token Launch"
 sidebarTitle: "Token Launch"
-description: "Launch an optional token on Monad via open bonding curve. Founder allocation vests in a contract; liquidity locks at graduation — enforced, not promised."
+description: "The optional token path on Monad: an open curve, founder vesting enforced by contract, permanently locked liquidity at graduation, and trading that never leaves your app page."
 ---
 
-The token launch is optional — you can run a full community app on FirstFifty with tiers, a devlog, polls, and milestones, and never touch a token at all. If you do launch, FirstFifty deploys first-party contracts on Monad, not a third-party wrapper. Every anti-rug protection — founder vesting, liquidity lock, allocation cap — is enforced at the contract level. You set the parameters once at launch; after that, the contract runs them.
+A token is optional on FirstFifty - and when you choose one, the safeguards are **contract-enforced, not promised**. Everything below is what the deployed contracts actually do; the numbers your launch uses are shown on the launch screen and on your app page.
 
-## Launch mechanics
+## The launch
 
-FirstFifty uses an **open bonding curve** for token launches. Here's how it works:
+<Steps>
+  <Step title="Configure">
+    Token name and ticker. Supply is fixed for every launch (no supply games between apps). Choose your founder allocation - anywhere from **0% up to 20%** - and its vesting schedule within the platform's floors.
+  </Step>
+  <Step title="Launch the curve">
+    One transaction deploys your token and its open curve on Monad. Anyone can buy from or sell to the curve at a price that moves with supply; every trade carries a small flat fee. Qualifying buys claim tier seats automatically.
+  </Step>
+  <Step title="Graduate">
+    Your page shows the curve's target. When the community fills it, graduation runs in the same breath: a Uniswap pool is created and seeded, and the pool's liquidity position is **locked forever** in a contract nobody - including us - can withdraw from.
+  </Step>
+  <Step title="Keep trading, same page">
+    After graduation the trade panel on your app page routes to the pool directly. Your chart, your holders, your community - nothing moves off your page.
+  </Step>
+</Steps>
 
-- **Anyone can mint** at the current curve price. There is no contributor gate, no whitelist, no private allocation round. The curve is open from the moment your token goes live.
-- **Price rises with supply.** As more tokens are purchased, the curve price increases. Early buyers get a lower price — this is the on-chain reward for being an early believer.
-- **No contributor gate.** Early adopters who claimed Founding 50 or Early 500 slots don't get a separate allocation; they participate on the same open curve as everyone else. Their advantage is being informed early through your tier-gated devlog.
-- **Graduation triggers the lock.** When the bonding curve fills to its target, the token graduates. At graduation, liquidity is automatically locked in the contract and your founder vesting clock starts.
+## What the contracts enforce
 
-Token holders automatically sync into your tier feeds. Founding 50 holders who buy tokens retain their slot perks on top of any token-related access.
+<CardGroup cols={2}>
+  <Card title="Founder vesting" icon="lock">
+    Your allocation sits in a per-launch vesting contract with the cliff and duration you chose at launch. The clock starts **at graduation** - a launch that never graduates vests nothing.
+  </Card>
 
-## Configuration
+  <Card title="Liquidity locked forever" icon="shield-check">
+    The graduated pool's liquidity position is held by a locker contract with no withdrawal path. It cannot be pulled by the founder, the team, or the platform.
+  </Card>
 
-When you set up a token launch, you configure the following parameters in your app dashboard:
+  <Card title="Open curve" icon="chart-line">
+    No presale, no allowlist on the curve. The same price function for everyone, visible on the page from the first block.
+  </Card>
 
-| Parameter | Value | Notes |
-|---|---|---|
-| `chain` | `monad` | All FirstFifty token launches are on Monad |
-| `mechanic` | `open_bonding_curve` | Open curve, no contributor gate |
-| `founder_allocation` | `0–20%` | You choose the percentage; cannot exceed 20% |
-| `founder_vesting` | Cliff + vest duration | You set both durations; clock starts at graduation |
-| `liquidity_lock_at_graduation` | `true` | Contract-enforced; cannot be disabled |
-| `anti_rug` | `contract_enforced` | Structural, not advisory |
-| `no_token_option` | Available | Skip the token entirely and run community-only |
+  <Card title="Contribution pool" icon="hand-holding-heart">
+    A slice of supply is set aside at launch for you to tip the contributors whose feedback you adopt - recipients don't even need a wallet yet to be owed it.
+  </Card>
+</CardGroup>
 
-You configure these parameters before launch. Once the token is live, the contract parameters are immutable — you cannot raise your founder allocation, shorten your vest, or unlock liquidity ahead of graduation.
+## Who decides what
 
-## Graduation
-
-Graduation is the moment your bonding curve fills to its target supply. When graduation happens:
-
-1. **Liquidity is locked.** The contract automatically locks the liquidity pool. No manual step is required — and no manual step can prevent it.
-2. **Founder vesting clock starts.** Your cliff period begins at the exact block of graduation. When the cliff expires, your vesting schedule begins releasing your founder allocation incrementally over the vest duration you configured.
-3. **Token is fully tradeable.** After graduation, your token exists on Monad as a standard tradeable asset with locked liquidity underpinning it.
-
-Graduation is a milestone for your community, not just a technical event. Consider posting a Founding 50 devlog entry when your curve is close — your most invested backers will want to know.
-
-## Skip the token
-
-Community-only mode is a first-class option on FirstFifty, not a fallback. If you skip the token:
-
-- Founding 50 and Early 500 tiers work exactly the same way
-- Your devlog, visibility controls, reactions, and replies all work normally
-- Polls, milestones, and roadmap votes are fully functional
-- Contribution Points accumulate for your backers
-- Retroactive allocation simply doesn't apply — there's no token to graduate
-
-Many early-stage makers run community-only during initial development and decide later whether to add a token. You can configure a token launch from your dashboard at any point before your community reaches graduation eligibility.
+The mechanics are code; the judgement stays human. Which apps deserve their moment is decided by seat holders and contributors showing up - backing, voting, testing, holding through graduation - not by a formula the platform runs over your community.
 
 <Warning>
-  Founder allocation is capped at 20% and vests on a schedule you set at launch time. The contract enforces this — once your token is live, you cannot increase your allocation, shorten your cliff, or accelerate your vest. Make sure your vesting configuration reflects the timeline you can genuinely commit to before you launch.
+  Launching a token is irreversible in the ways that matter: the supply, your founder allocation, and your vesting schedule are fixed at launch. Read the launch screen slowly; the platform shows you every number before you sign.
 </Warning>
 
 <Note>
-  Token holders automatically sync into your tier feeds. Founding 50 holders who buy tokens retain their full slot perks — their slot number, office hours access, roadmap vote, and tier-gated devlog visibility remain active alongside any token-based access.
+  Not sure you want a token at all? Don't launch one. Community-only apps get the same page, tiers, devlogs, and Discover placement - the token adds a market, not legitimacy.
 </Note>

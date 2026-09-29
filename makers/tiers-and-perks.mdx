@@ -1,70 +1,49 @@
 ---
-title: "Founding 50 and Early 500: Tiers and Perks for Every App"
+title: "Tiers & Perks"
 sidebarTitle: "Tiers & Perks"
-description: "Every FirstFifty app includes Founding 50 and Early 500 tier slots. Configure perks, see what backers receive, and learn how scarcity drives engagement."
+description: "Founding 50, Early 500, Public: how seats are claimed on FirstFifty, what each tier includes, and how makers grant seats by hand."
 ---
 
-Every app on FirstFifty automatically comes with three tiers: Founding 50, Early 500, and Public. You don't set up the tier structure — it's built into the platform. What you configure is the perks attached to each tier: what Founding 50 members get that Early 500 members don't, and what both get that public visitors don't. The scarcity is the mechanic. Fifty Founding 50 slots, five hundred Early 500 slots, globally, ever. Once they're claimed, they're gone.
+Every published app opens the same three tiers. The caps are the product: a numbered seat in a capped tier is scarce enough to want and permanent enough to keep.
 
 ## The three tiers
 
 <CardGroup cols={3}>
-  <Card title="Founding 50" icon="trophy" href="/adopters/tiers">
-    **50 slots per app — permanent.**
-
-    - Mono-typed slot number displayed on their profile
-    - Monthly founder office hours (direct access to you)
-    - Roadmap vote on all open decisions
-    - Founding 50–only devlog visibility
-    - Retroactive allocation: `tier × CP × time held` (largest slice)
-    - On-chain slot receipt proving they were among the first 50
+  <Card title="Founding 50" icon="crown">
+    Fifty numbered seats. The inner circle: Founding-gated devlogs, the loudest badge, the biggest Contribution Point award per seat.
   </Card>
-  <Card title="Early 500" icon="medal" href="/adopters/tiers">
-    **500 slots per app — permanent.**
 
-    - Public badge showing their slot number
-    - Early access to new features (one week ahead of public)
-    - Roadmap vote on all open decisions
-    - Members-only devlog visibility
-    - Retroactive allocation: `tier × CP × time held` (smaller slice than Founding 50)
-    - On-chain slot receipt proving they were in the first 500
+  <Card title="Early 500" icon="bolt">
+    Five hundred numbered seats for the wave after: members-gated content, early-member badge, strong CP.
   </Card>
-  <Card title="Public" icon="globe" href="/adopters/tiers">
-    **Unlimited — no slot required.**
 
-    - Access to your public devlog entries and milestone updates
-    - Participation in public polls
-    - Ability to buy your token if you've launched one
-    - No slot receipt, no retroactive allocation, no tier-gated access
+  <Card title="Public" icon="users">
+    Unlimited and free to join. Full membership - forum, polls, feedback - without the scarce number.
   </Card>
 </CardGroup>
 
-## Slot receipts
+## How a seat is claimed
 
-When someone claims a Founding 50 or Early 500 slot on your app, they receive a permanent on-chain receipt tied to their slot number. The receipt is timestamped at claim time and cannot be transferred or duplicated. Slot `#3` will always be slot `#3` — it's a verifiable record that this person was among the first to back your app.
+**On community-only apps:** joining claims a seat directly, in claim order.
 
-This matters for two reasons. First, it makes early support legible: a Founding 50 badge isn't a follower count or a like — it's a provable claim with a number attached. Second, it creates a social incentive to claim early: lower slot numbers carry more status, and the retroactive allocation formula rewards time held, so getting in at slot `#3` versus slot `#47` has a compounding effect.
+**On token apps:** a capped seat is claimed by a **single qualifying buy** of the app's token. The rules, exactly as the platform applies them:
 
-## Contribution Points (CP)
+- **One buy qualifies.** The tier thresholds are dollar values shown on the tier card (Founding higher, Early lower). A single buy at or above a threshold claims that tier's next seat.
+- **Split buys don't add up.** Two half-sized buys claim nothing; the measure is per transaction.
+- **Bigger buys take the best open tier.** A large buy claims Founding while seats remain; when a tier is full, the claim rolls down to the next tier with room.
+- **The seat survives selling.** Once minted, the seat is yours even if you sell every token. It records that you were early - it is not a balance.
 
-Contribution Points accumulate when backers interact with your app: reacting to devlog entries, voting on polls, completing milestone interactions, and participating in roadmap votes. CP is tracked per backer, per app. It reflects how engaged someone is with your build over time — not just that they claimed a slot, but that they kept showing up.
+## Granting seats by hand
 
-CP compounds into leaderboard rank and into the retroactive allocation formula. For detailed mechanics on how CP is earned and tracked, see the [Contribution Points guide](/adopters/contribution-points).
+Some of your first fifty aren't buyers - they're the tester who's been with you since the prototype. From your dashboard you can **grant a seat** to any account by handle, or hold one against an email address that hasn't signed up yet. Granted seats are numbered like any other and marked as granted in the record.
 
-## Retroactive allocation formula
+## Perks that are built in
 
-If your app launches a token and reaches graduation, backers with tier slots become eligible for a retroactive allocation. The formula is:
-
-```
-retroactive allocation = tier weight × CP × time held
-```
-
-- **Tier weight** — Founding 50 carries a higher multiplier than Early 500. Public backers are not eligible.
-- **CP** — total Contribution Points earned on your app. More engagement means a larger slice.
-- **Time held** — how long the backer has held their slot. Claiming early and staying engaged maximizes the return.
-
-The formula rewards the backers who were most invested — both financially (via tier) and behaviorally (via CP and time). It aligns your community's incentives with your app's long-term success.
+- **Gated devlogs** per tier
+- **Badges** on the backer's profile (founding member, early member)
+- **Contribution Points** on claim - earlier seats earn more
+- **The soulbound backer proof** (token apps): seat holders can mint an on-chain ticket showing their tier, seat number, and how early their wallet bought
 
 <Note>
-  You don't need a token to use tiers. Community-only mode is fully supported — Founding 50 and Early 500 tiers, devlog visibility controls, polls, milestones, and Contribution Points all work without any token attached to your app. Retroactive allocation simply doesn't apply if there's no token to graduate.
+  Team members can't hold seats on their own app - seats are for backers, and the platform enforces that.
 </Note>
