@@ -1,62 +1,57 @@
 ---
 title: "Contribution Points"
 sidebarTitle: "Contribution Points"
-description: "Contribution Points (CP) record how much you help the apps you back. They feed your leaderboard rank and your standing on every app you belong to."
+description: "Exactly how Contribution Points are earned on FirstFifty: every award, its size, and the caps that apply."
 ---
 
-Contribution Points are FirstFifty's record of how much you actually help. Holding a seat says you were early; CP says you were useful. They are earned by doing things, never bought, and they feed your rank on the [leaderboards](/adopters/leaderboards).
+Contribution Points (CP) are FirstFifty's record of how much you actually help. Holding a seat says you were early; CP says you were useful. They are earned by doing things, never bought, and every award is written to a ledger, so your total always adds up.
 
-<CardGroup cols={2}>
-  <Card title="Earned, not bought" icon="hand-holding-heart">
-    There is no way to purchase CP or speed it up with money. Showing up is the only route.
-  </Card>
+## Every way to earn CP
 
-  <Card title="Seat-weighted" icon="ticket">
-    A better seat earns more per action: earlier Founding seats earn the most, Early seats a strong share, Public members a starting share.
-  </Card>
-
-  <Card title="Public and permanent" icon="trophy">
-    CP compounds into your rank across every app you back, and your rank does not reset.
-  </Card>
-
-  <Card title="Topped up on upgrade" icon="arrow-up-right-dots">
-    If a later qualifying buy moves you into a higher tier, your CP tops up to that seat's rate.
-  </Card>
-</CardGroup>
-
-## How you earn CP
-
-<Steps>
-  <Step title="Claim a seat">
-    Taking a seat on an app earns CP straight away. The earlier and higher the seat, the more it is worth.
-  </Step>
-  <Step title="Engage with the build">
-    React to devlog entries, vote in member polls, and take part in milestones. Each is a small, real signal that you are paying attention.
-  </Step>
-  <Step title="Give feedback the maker uses">
-    Structured feedback that a maker adopts is one of the most valuable things you can do. Makers can also tip contributors whose feedback helped.
-  </Step>
-  <Step title="Stay through the launch">
-    Holding your seat through a token launch that graduates is recognized, and early buys on a graduating curve count toward your standing.
-  </Step>
-</Steps>
-
-## What CP does for you
-
-<AccordionGroup>
-  <Accordion title="It sets your leaderboard rank">
-    CP is one of the inputs to the Top Believers board, alongside early buys and held seats on graduated tokens. See [Leaderboards](/adopters/leaderboards).
-  </Accordion>
-
-  <Accordion title="It shows makers who showed up">
-    Makers see who reacts, votes, and gives feedback. Consistent contributors are the ones they notice, thank, and tip.
-  </Accordion>
-
-  <Accordion title="It is part of your public record">
-    Your profile shows the seats you hold and the contribution behind them, so being early is something you can point to instead of just remembering.
-  </Accordion>
-</AccordionGroup>
+| Action | CP | Rule |
+| --- | --- | --- |
+| Claim a capped seat (Founding or Early) | **100 minus your seat number**, never below 10 | Once per seat. Seat #1 pays 99, seat #25 pays 75, seat #90 and beyond pay 10 |
+| Claim a Public seat | **5** | Flat rate |
+| Bring someone in with your referral link | **20** for you, **10** for them | When they join an app through your link |
+| Your referral makes a qualifying buy | **30** | Only within 30 days of the referral link being used |
+| Feedback you gave is adopted by the maker | **50** | The maker marks it adopted |
+| Vote in a member poll | **2** | Once per poll |
+| Be one of the first 50 buyers of a token | **25** | Once per token, by your wallet's buy order |
+| Hold through graduation | **100** | You bought early and still hold when the token graduates |
 
 <Info>
-  CP is deliberately not a money-for-points scheme. Two people with the same seat can end up far apart on the boards purely through how much they contributed.
+  Referral CP has a daily cap of **200 per person per UTC day**. Awards past the cap are skipped, not queued.
 </Info>
+
+<Note>
+  Devlog reactions and milestone activity do not earn CP today. Only the actions in the table do.
+</Note>
+
+## Moving up a tier
+
+If you join as Public and later make a qualifying buy that moves you into Founding or Early, your seat CP **tops up** to what a straight claim of the new seat would have paid. You never lose what you already earned, and you end up level with someone who claimed the higher seat directly.
+
+## A worked example
+
+You claim Founding seat #7, vote in 5 polls, get one piece of feedback adopted, buy in among the first 50 buyers, and hold until the token graduates.
+
+| Award | CP |
+| --- | --- |
+| Founding seat #7 (100 minus 7) | 93 |
+| 5 poll votes (5 times 2) | 10 |
+| Adopted feedback | 50 |
+| Early buyer | 25 |
+| Held through graduation | 100 |
+| **Total** | **278** |
+
+## Where CP goes
+
+<CardGroup cols={1}>
+  <Card title="Your belief score" icon="chart-line" href="/adopters/leaderboards#how-belief-score-is-calculated" horizontal>
+    Lifetime CP counts toward your belief score at a weight of 0.1 per point, so 278 CP adds 27.8 points.
+  </Card>
+
+  <Card title="Your public record" icon="user" href="/adopters/overview" horizontal>
+    CP shows on your profile and next to your name on each app's backers page.
+  </Card>
+</CardGroup>

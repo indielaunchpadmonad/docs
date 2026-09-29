@@ -1,57 +1,114 @@
 ---
-title: "Leaderboards"
+title: "Leaderboards and Scores"
 sidebarTitle: "Leaderboards"
-description: "Four public boards make being early verifiable: Most Backers, Top Believers, Trending, and Closest to Graduation."
+description: "The four public boards and the exact formulas behind belief score, trending, and graduation progress."
 ---
 
-Your rank is not something you remember or claim in conversation. It is scored, updated, and visible to anyone on the platform. Four boards each measure a different side of being early.
+Your rank is not something you claim in conversation. It is scored and visible to anyone. Four boards each measure a different side of being early, and every score below is calculated the same way for everyone.
+
+<Frame caption="The Leaderboards page at firstfifty.xyz/leaderboards.">
+  ![The FirstFifty leaderboards](/images/leaderboards.png)
+</Frame>
 
 <CardGroup cols={2}>
-  <Card title="Most Backers" icon="users">
-    Ranked by how many apps you have backed with a claimed seat. Rewards breadth: people who keep finding and backing new apps. Live from day one.
+  <Card title="Top Believers" icon="trophy">
+    People ranked by belief score. Seats, early buys, and CP all count.
   </Card>
 
-  <Card title="Top Believers" icon="trophy">
-    Ranked by belief score, the most prestigious board. It fills once the first launch graduates, and scores count all earlier activity.
+  <Card title="Most Backers" icon="users">
+    Live apps ranked by how many members they have.
   </Card>
 
   <Card title="Trending" icon="chart-line">
-    Apps gaining the most traction right now, from new seat claims and community activity. Use it to see what the platform is paying attention to.
+    Live token apps ranked by recent trading momentum.
   </Card>
 
   <Card title="Closest to Graduation" icon="flag-checkered">
-    Apps whose curves are nearest to filling. A last window to get in before a token launch graduates.
+    Live token apps on the curve, ranked by how full the curve is.
   </Card>
 </CardGroup>
 
-## What feeds belief score
+Each board shows the top 100. Rankings are live, and a snapshot is taken every day at 03:00 UTC to award badges and send "you entered the top 100" notifications.
 
-Belief score is built from outcomes, not intent, which is why the board only fills after a launch has graduated.
+## How belief score is calculated
 
-<Steps>
-  <Step title="Early buys on graduated tokens">
-    Buying early on a curve that goes on to graduate registers in your score.
-  </Step>
-  <Step title="Held seats on graduated tokens">
-    A Founding or Early seat held through graduation counts, and the seat's tier influences its weight.
-  </Step>
-  <Step title="Contribution Points">
-    The [CP](/adopters/contribution-points) you earned on that app compound into the same score.
-  </Step>
-</Steps>
+Belief score is the sum of three parts, added across every app you back.
 
-## Why rank matters
+**1. Each seat you hold**
+
+```text
+seat points = 100 / sqrt(seat number) / (tier position)
+```
+
+Tier position is 1 for Founding and 2 for Early, so the same seat number is worth half as much in Early. If the token has graduated, multiply by **3**. Withdrawn seats do not count.
+
+**2. Each token you bought early**
+
+```text
+buy points = 100 / sqrt(your buy order)
+```
+
+If the token graduated, multiply by **3**. Then multiply by **1** if you still hold, or **0.25** if you have sold out.
+
+**3. Your Contribution Points**
+
+```text
+CP points = 0.1 x lifetime CP
+```
+
+### Worked examples
+
+| Case | Calculation | Points |
+| --- | --- | --- |
+| Founding seat #4, not yet graduated | 100 / 2 / 1 | 50 |
+| Founding seat #4, token graduated | 50 x 3 | 150 |
+| Early seat #4, token graduated | 100 / 2 / 2 x 3 | 75 |
+| Bought 25th, still holding, graduated | 100 / 5 x 3 x 1 | 60 |
+| Bought 25th, sold out, graduated | 100 / 5 x 3 x 0.25 | 15 |
+| 278 lifetime CP | 0.1 x 278 | 27.8 |
+
+The score updates nightly, and again the moment a token you hold graduates, so the tripling shows up right away. You appear on Top Believers as soon as your score is above zero.
+
+<Tip>
+  The square root means early matters most without becoming absurd: seat #4 is worth half of seat #1, and seat #100 is worth a tenth of it.
+</Tip>
+
+## The other boards
 
 <AccordionGroup>
-  <Accordion title="It is public and permanent">
-    Rank does not reset or expire, and it cannot be bought with late capital. As more apps launch, the record of who was early and what they backed only gets clearer.
+  <Accordion title="Trending score">
+    ```text
+    trend = (2 x log10(1 + volume in USD, last 24h) + 3 x log10(1 + unique traders, last 24h))
+            x exp(-hours since last trade / 12)
+    ```
+    Volume and trader count are log-scaled so one whale cannot dominate, and the score fades with a half-life of about 8 hours since the last trade. Tokens with no activity in 24 hours drop off the board.
   </Accordion>
 
-  <Accordion title="It reflects real behavior">
-    The same activity that lifts your rank, seats, early buys, and contribution, is what shows makers you are a believer worth listening to.
+  <Accordion title="Closest to Graduation">
+    Curve progress is measured in basis points, where 10,000 means the curve is full. Only live apps whose token is still on the curve appear, sorted from fullest down.
+  </Accordion>
+
+  <Accordion title="Most Backers">
+    The count of members (every tier, including Public) of each live app. Ties are broken alphabetically by app slug.
   </Accordion>
 </AccordionGroup>
 
-<Note>
-  The Top Believers board is calculated from all activity up to the first graduation, so engaging now still counts.
-</Note>
+## Badges
+
+<CardGroup cols={2}>
+  <Card title="Founding and Early member" icon="ticket">
+    Awarded on an app when you hold a Founding or Early seat there.
+  </Card>
+
+  <Card title="Scout" icon="binoculars">
+    You were among the first 100 buyers of a token that later graduated.
+  </Card>
+
+  <Card title="OG Believer" icon="medal">
+    Bronze at 3 apps joined, silver at 10, gold at 25.
+  </Card>
+
+  <Card title="Top Believer" icon="crown">
+    Awarded daily to everyone in that day's top 100 on the Top Believers board.
+  </Card>
+</CardGroup>

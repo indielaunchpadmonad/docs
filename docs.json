@@ -31,45 +31,57 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "how-it-works",
-              "create-account"
-            ]
-          },
-          {
-            "group": "For Makers",
-            "pages": [
-              "makers/overview",
-              "makers/app-page",
-              "makers/devlog",
-              "makers/tiers-and-perks",
-              "makers/token-launch"
-            ]
-          },
-          {
-            "group": "For Early Adopters",
-            "pages": [
-              "adopters/overview",
-              "adopters/tiers",
-              "adopters/contribution-points",
-              "adopters/leaderboards"
-            ]
-          },
-          {
-            "group": "Platform",
-            "pages": [
-              "platform/discover",
-              "platform/community-features",
-              "platform/faq"
-            ]
-          }
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "how-it-works",
+          "create-account"
+        ]
+      },
+      {
+        "group": "For Makers",
+        "pages": [
+          "makers/overview",
+          "makers/app-page",
+          "makers/devlog",
+          "makers/tiers-and-perks",
+          "makers/token-launch"
+        ]
+      },
+      {
+        "group": "Maker Tutorials",
+        "pages": [
+          "makers/post-an-app",
+          "makers/manage-your-app",
+          "makers/write-a-devlog",
+          "makers/add-a-poll"
+        ]
+      },
+      {
+        "group": "For Early Adopters",
+        "pages": [
+          "adopters/overview",
+          "adopters/tiers",
+          "adopters/contribution-points",
+          "adopters/leaderboards"
+        ]
+      },
+      {
+        "group": "Adopter Tutorials",
+        "pages": [
+          "adopters/join-founding-50",
+          "adopters/join-the-discussion",
+          "adopters/give-feedback"
+        ]
+      },
+      {
+        "group": "Platform",
+        "pages": [
+          "platform/discover",
+          "platform/community-features",
+          "platform/faq"
         ]
       }
     ]

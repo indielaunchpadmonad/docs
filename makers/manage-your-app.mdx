@@ -1,0 +1,91 @@
+---
+title: "Manage Your App"
+sidebarTitle: "Tutorial: Manage an App"
+description: "A tour of the Manage area: overview and publishing, members and seats, milestones, feedback, and settings."
+---
+
+Every app has a Manage area at `/dashboard/apps/your-app`. Open it from your dashboard. The tabs run in this order: **Overview**, **Analytics**, **Devlog**, **Members**, **Milestones**, **Polls**, **Feedback**, **Contribution pool**, **Settings**, and **Token**. A badge beside the name shows whether the app is a draft, live, or archived, and a **View live** link takes you to the public page once it is live.
+
+<Frame caption="Backers and seats as visitors see them. Manage is where you control what feeds this card.">
+  ![The tiers and backers cards on an app page](/images/app-tiers.png)
+</Frame>
+
+## Overview
+
+The four stat cards (Members, Devlog entries, Milestones, Token) link to their tabs. The **Status** card holds the publish control:
+
+- **Publish app** on a draft. Your tiers open and the page goes live.
+- **Archive** on a live app, and **Unarchive** to bring it back.
+- A published app cannot go back to draft.
+
+The **Next actions** checklist walks you through the sensible order: write the story, add your first milestones, post your first devlog, and optionally configure a token launch.
+
+## Members and seats
+
+<AccordionGroup>
+  <Accordion title="Give a seat by hand">
+    In **Members**, use **Give a seat**. Type a handle, name, wallet address or email in **Who**, add an optional note (up to 280 characters), and confirm. You will see "Seated: {tier} #{n}". If the person has no account yet, the seat is held for their email and they get it when they sign up with that address.
+  </Accordion>
+
+  <Accordion title="Change a member's tier">
+    The roster has a filter box and a tier dropdown on each row. Tiers that are full are marked "(full)". Each row also shows how the person got their seat: bought in, given a seat, or joined.
+  </Accordion>
+
+  <Accordion title="Edit tiers">
+    You can rename a tier, raise its seat count, and describe what members get in Markdown. Seats can only go up, a tier with members cannot be deleted, and an app can have at most six tiers. The seat price is shown but is read-only.
+  </Accordion>
+
+  <Accordion title="Invite your team">
+    Under **Team**, invite someone by email with a title and a role. You can resend, withdraw, or remove invitations. Team members cannot hold seats on your app.
+  </Accordion>
+
+  <Accordion title="Spotlight an adopter">
+    **Adopter of the week** lets you pick a member, write why (up to 500 characters), and press **Set spotlight**. They are notified.
+  </Accordion>
+
+  <Accordion title="Open seats on chain">
+    After a token launch, the tier locks card has an **Open seats on chain** button to open Founding and Early for buys.
+  </Accordion>
+</AccordionGroup>
+
+## Milestones
+
+Add three to five specific goals, up to a maximum of ten. Each has a **Label** (up to 80 characters), a **Target** and a **Unit**, for example "First 100 paying users" with a target of 100 and the unit "users". Update the progress number and press **Save**. When a target is reached, your members are notified. A milestone can be deleted only until it has been hit.
+
+## Feedback inbox
+
+Feedback is listed with the most upvoted first. For each item you can:
+
+<Steps>
+  <Step title="Set a status">
+    **Open**, **Planned**, **Adopted**, or **Declined**. Public pages show adopted work as "shipped".
+  </Step>
+  <Step title="Reply publicly">
+    Add an optional public response, up to 2,000 characters, and press **Save**.
+  </Step>
+  <Step title="Adopt with care">
+    Adopting is permanent: it awards the author **50 Contribution Points** and cannot be undone.
+  </Step>
+  <Step title="Tip the author">
+    On a token app, tip from the contribution pool with a preset (1K, 10K, 50K, 100K) or a custom amount. If the person has no wallet linked, the tokens are held for them until they do.
+  </Step>
+</Steps>
+
+You can also hide an item from the public page and show it again later.
+
+## Settings and the rest
+
+- **Settings** holds your name, slug, one-liner, story, logo, banner and links. Press **Save changes**. The slug is editable only while the app is a draft, and drafts can be deleted here.
+- **Contribution pool** is the ledger of tips paid out of your launch's pool.
+- **Token** shows your launch configuration, and lets a community-only app pick a mechanic when you are ready.
+- **Analytics** is marked "Coming soon".
+
+<CardGroup cols={2}>
+  <Card title="Write a devlog" icon="pen-nib" href="/makers/write-a-devlog">
+    Post updates with per-tier visibility.
+  </Card>
+
+  <Card title="Add a poll" icon="square-poll-vertical" href="/makers/add-a-poll">
+    Let your members decide what comes next.
+  </Card>
+</CardGroup>
